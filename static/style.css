@@ -1,6 +1,12 @@
+body{
+    background-color: rgb(11, 11, 54);
+    color: white;
+}
+
+
 .body-head{
     border-radius: 10px;
-    background-color: rgb(177, 177, 177);
+    background-color: rgb(5, 126, 95);
     text-align: center;
     margin-right: 300px;
     margin-left: 300px;
@@ -11,4 +17,6 @@
     font-weight: bold;
     font-style: italic;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    list-style: none;
+    color: white;
 }

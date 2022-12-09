@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #subbutton{
+            border-radius: 10px;
+            width: 80px;
+            height: 40px;
+            background-color: rgb(149, 112, 18);
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <h2>Welcome {{user.username}} <br></h2>
+    <a href="logout"><button style="background-color: lightblue;">logout</button> </a>
+    {% else %}
+    <a href="login" target="_parent"><button style="background-color: lightblue;">login</button> </a>
+    {% endif %}
+    <h1 style="text-align:center;">Welcome to Dev Desk</h1>
+    <form action="counter" method="POST">
+        {% csrf_token %}
+        <textarea name="text" cols="30" rows="10" placeholder="enter text here"></textarea> <br>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

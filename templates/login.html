@@ -1,8 +1,15 @@
+<h1>Login Now</h1>
+
+{% for message in messages %}
+<h4 style="color:red;">{{message}}</h4>
+{% endfor %}
 <form action="login" method="POST">
     {% csrf_token %}
-    <input type="text" name="username" placeholder="username" required>
-    <p></p>
-    <input type="password" name="password" placeholder="password" required>
-    <br>
-    <button value="suv">submit</button>
+    <p>Username:</p>
+    <input type="text" name="username" required/>
+    <p>Password:</p>
+    <input type="password" name="password" required/>    
+    <button type="submit">submit</button>
+
+    if you have not register <a href="register">click here</a>
 </form>
